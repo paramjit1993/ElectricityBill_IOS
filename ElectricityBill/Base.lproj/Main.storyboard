@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="36"/>
+            <point key="canvasLocation" x="409" y="36"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Y1a-DG-8W5">
@@ -64,14 +64,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfW-za-MI2">
                                 <rect key="frame" x="16" y="272" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="swRemember:" destination="f3T-TN-Gg4" eventType="valueChanged" id="Soh-TX-f0u"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember me?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep9-nT-sfk">
                                 <rect key="frame" x="83" y="272" width="276" height="26"/>
@@ -85,22 +82,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="btLogin:" destination="f3T-TN-Gg4" eventType="touchUpInside" id="wax-fy-axC"/>
-                                    <segue destination="f9U-eB-xGB" kind="show" identifier="segueToBill" id="X1t-XV-UFV"/>
+                                    <action selector="btLogin:" destination="f3T-TN-Gg4" eventType="touchUpInside" id="KC0-pP-8tu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42256526232871805" green="1" blue="0.83425098173479306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="I5Q-fY-FEd"/>
                         <connections>
-                            <outlet property="txtPassword" destination="PqB-oD-zLB" id="bMm-0S-qFU"/>
-                            <outlet property="txtUsername" destination="EPz-44-2wq" id="9ho-Eq-ZLS"/>
+                            <outlet property="txtPassword" destination="PqB-oD-zLB" id="vKG-Pm-KSd"/>
+                            <outlet property="txtUserName" destination="EPz-44-2wq" id="7hP-TK-Hsc"/>
                         </connections>
                     </view>
+                    <connections>
+                        <segue destination="mxv-Rz-AZs" kind="show" identifier="showBillCalculationScreen" id="6Y5-kb-Kly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blv-Tr-kZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365.5999999999999" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1145" y="36"/>
         </scene>
         <!--Electricity Bill View Controller-->
         <scene sceneID="95W-km-tHm">
@@ -132,51 +131,67 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-ce-eQl">
-                                <rect key="frame" x="16" y="232" width="343" height="30"/>
+                                <rect key="frame" x="16" y="271" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-9P-usF">
-                                <rect key="frame" x="1" y="402" width="337" height="30"/>
+                                <rect key="frame" x="6" y="436" width="337" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <segue destination="CBB-Nc-z5l" kind="show" id="LMj-OL-4Xc"/>
+                                    <action selector="btBillCal:" destination="f9U-eB-xGB" eventType="touchUpInside" id="251-ig-1zk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mL-wQ-J2W">
-                                <rect key="frame" x="16" y="341" width="351" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unit Consume" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebZ-lz-Kp8">
-                                <rect key="frame" x="16" y="288" width="343" height="30"/>
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-Mu-1AI">
+                                <rect key="frame" x="90" y="223" width="263" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="MALE"/>
+                                    <segment title="FEMALE"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segGender:" destination="f9U-eB-xGB" eventType="valueChanged" id="xgT-kg-ZSk"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFf-eo-6zc">
+                                <rect key="frame" x="18" y="223" width="64" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22499202884560454" green="1" blue="0.7193332163762316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="NlH-wI-yZC"/>
                     </view>
                     <navigationItem key="navigationItem" id="ndU-NQ-Vjo"/>
                     <connections>
-                        <segue destination="CBB-Nc-z5l" kind="show" id="PiH-Vq-4tc"/>
+                        <outlet property="lblDate" destination="I8y-ce-eQl" id="sFI-FX-HTS"/>
+                        <outlet property="lblName" destination="nIm-JG-Df4" id="M36-Tg-egf"/>
+                        <outlet property="txtId" destination="R0y-cd-1Z3" id="FJ9-ww-bUj"/>
+                        <outlet property="txtName" destination="nIm-JG-Df4" id="VNv-1q-8ag"/>
+                        <outlet property="txtUnits" destination="ebZ-lz-Kp8" id="qFy-Z0-pWv"/>
+                        <segue destination="CBB-Nc-z5l" kind="show" identifier="nv" id="PiH-Vq-4tc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sah-m7-GuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2952.8000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="2735" y="36"/>
         </scene>
         <!--Details-->
         <scene sceneID="Vzw-HX-5w5">
             <objects>
-                <viewController storyboardIdentifier="detailVC" id="CBB-Nc-z5l" customClass="BillDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="CBB-Nc-z5l" customClass="BillDetailViewController" customModule="ElectricityBill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pw5-TQ-Isq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,11 +220,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuO-Pt-B3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.5999999999999" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1938" y="36"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="PiH-Vq-4tc"/>
-        <segue reference="X1t-XV-UFV"/>
-    </inferredMetricsTieBreakers>
 </document>

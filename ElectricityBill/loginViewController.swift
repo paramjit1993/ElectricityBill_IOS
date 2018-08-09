@@ -10,24 +10,14 @@ import UIKit
 
 class loginViewController: UIViewController {
 
-    @IBOutlet weak var txtUsername: UITextField!
+
+    @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
+
     @IBAction func swRemember(_ sender: Any) {
     }
-    @IBAction func btLogin(_ sender: Any) {
-        
-        if txtUsername.text == "admin@a.com"  && txtPassword.text == "S3Cr3t"
-        {
-            //lblmsg.text = "VALID"
-           // lblmsg.isHidden = false
-           // lblmsg.textColor = UIColor.green
-        }
-        else {
-           // lblmsg.text = "INVALID"
-           // lblmsg.isHidden = false
-           // lblmsg.textColor = UIColor.red
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,14 +30,20 @@ class loginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func btLogin(_ sender: UIButton) {
+        if txtUserName.text == "admin@a.com" && txtPassword.text == "SECRET"
+        {
+            performSegue(withIdentifier: "showBillCalculationScreen", sender: self)
+            print("Login Success")
+            
+        }
+        else{
+            print("User Email / Password incorrect")
+        }
     }
-    */
+    
+        
+    
+    
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B44BD1E211CCBD5001385C3 /* BillDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44BD1D211CCBD5001385C3 /* BillDetailViewController.swift */; };
 		9BB1556B211B656D00F093CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1556A211B656D00F093CC /* AppDelegate.swift */; };
 		9BB1556D211B656D00F093CC /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1556C211B656D00F093CC /* splashViewController.swift */; };
 		9BB15570211B656D00F093CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB1556E211B656D00F093CC /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B44BD1D211CCBD5001385C3 /* BillDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailViewController.swift; sourceTree = "<group>"; };
 		9BB15567211B656D00F093CC /* ElectricityBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricityBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB1556A211B656D00F093CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB1556C211B656D00F093CC /* splashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				9BB15582211B71A500F093CC /* loginViewController.swift */,
 				9BB15584211B71D300F093CC /* electricityBillViewController.swift */,
 				9BB155A6211B96ED00F093CC /* ElectricityBill.swift */,
+				9B44BD1D211CCBD5001385C3 /* BillDetailViewController.swift */,
 			);
 			path = ElectricityBill;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				9BB15583211B71A500F093CC /* loginViewController.swift in Sources */,
 				9BB15585211B71D300F093CC /* electricityBillViewController.swift in Sources */,
+				9B44BD1E211CCBD5001385C3 /* BillDetailViewController.swift in Sources */,
 				9BB1556D211B656D00F093CC /* splashViewController.swift in Sources */,
 				9BB155A7211B96ED00F093CC /* ElectricityBill.swift in Sources */,
 				9BB1556B211B656D00F093CC /* AppDelegate.swift in Sources */,

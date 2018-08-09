@@ -11,7 +11,12 @@ enum Gender {
     case MALE
     case FEMALE
 }
-struct ElectricityBill()
-do {
-    
+struct ElectricityBill
+{
+    var customerId: Int?
+    var customerName: String?
+    var gender: Gender?
+    var billDate: Date?
+    var unitConsumed: Int?
+    var totalBillAmount: Double?
 }
